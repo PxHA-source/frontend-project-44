@@ -10,4 +10,10 @@ publish:
 lint:
 	npm eslint .
 
-.PHONY: install brain-games publish lint
+brain-calc:
+	node bin/brain-calc.js
+
+brain-even:
+	node bin/brain-even.js
+
+.PHONY: install brain-games publish lint brain-even brain-calc
