@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+// eslint-disable-next-line import/extensions
 import randomNumber from '../helper.js';
 
 const signs = ['+', '-', '*'];
