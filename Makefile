@@ -15,5 +15,7 @@ brain-calc:
 
 brain-even:
 	node bin/brain-even.js
+brain-gcd:
+	node bin/brain-gcd.js
 
-.PHONY: install brain-games publish lint brain-even brain-calc
+.PHONY: install brain-games publish lint brain-even brain-calc brain-gcd
