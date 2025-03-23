@@ -2,6 +2,7 @@
 /* eslint-disable no-console */
 import readlineSync from 'readline-sync';
 import randomNumber from '../helper.js';
+import { greetUser, checkAnswer, congratulations } from '../cli.js';
 
 const euclid = (num1, num2) => {
   let a = num1;
@@ -18,23 +19,19 @@ const euclid = (num1, num2) => {
 
 export default function generalDivider() {
   let i = 0;
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name?: ');
-  console.log(`Hello, ${name}`);
+  const name = greetUser();
   console.log('Find the greatest common divisor of given numbers.');
   while (i < 3) {
-    const num1 = randomNumber();
-    const num2 = randomNumber();
+    const num1 = randomNumber(1, 50);
+    const num2 = randomNumber(1, 50);
     const correctAnswer = String(euclid(num1, num2));
     console.log(`Question: ${num1} ${num2}`);
-    const answer = readlineSync.question('Your Answer: ');
-    if (answer === correctAnswer) {
-      console.log('Correct!');
+    const answer = readlineSync.question('Your Answer: ').toLowerCase();
+    if (checkAnswer(answer, correctAnswer.toString(), name)) {
       i += 1;
     } else {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}. \n Let's try again, ${name}`);
       return;
     }
   }
-  console.log(`Congratulations, ${name}`);
+  congratulations(name);
 }

@@ -1,6 +1,8 @@
+/* eslint-disable import/extensions */
 import readlineSync from 'readline-sync';
 // eslint-disable-next-line import/extensions
 import randomNumber from '../helper.js';
+import { greetUser, checkAnswer, congratulations } from '../cli.js';
 
 const generate = () => {
   // Генерируем случайную длину прогрессии от 5 до 10
@@ -22,9 +24,7 @@ const generate = () => {
 /* eslint-disable no-console */
 export default function progression() {
   let i = 0;
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name?: ');
-  console.log(`Hello, ${name}`);
+  const name = greetUser();
   console.log('What number is missing in the progression?');
 
   while (i < 3) {
@@ -33,16 +33,12 @@ export default function progression() {
     const correctAnswer = n[randomIndex];
     n[randomIndex] = '..';
     console.log(`Question: ${n.join(' ')}`);
-    const answer = readlineSync.question('Your Answer: ');
-    if (answer === correctAnswer.toString()) {
-      console.log('Correct!');
+    const answer = readlineSync.question('Your Answer: ').toLowerCase();
+    if (checkAnswer(answer, correctAnswer, name)) {
       i += 1;
     } else {
-      console.log(
-        `${answer} is wrong answer ;(. Correct answer was ${correctAnswer}. \n Let's try again, ${name}`,
-      );
       return;
     }
   }
-  console.log(`Congratulations, ${name}`);
+  congratulations(name);
 }
