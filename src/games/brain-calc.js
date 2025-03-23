@@ -1,6 +1,5 @@
 /* eslint-disable import/extensions */
 import readlineSync from 'readline-sync';
-// eslint-disable-next-line import/extensions
 import randomNumber from '../helper.js';
 import { greetUser, checkAnswer, congratulations } from '../cli.js';
 

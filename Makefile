@@ -19,5 +19,7 @@ brain-gcd:
 	node bin/brain-gcd.js
 brain-progression:
 	node bin/brain-progression.js
+brain-prime:
+	node bin/brain-prime.js
 
-.PHONY: install brain-games publish lint brain-even brain-calc brain-gcd brain-progression
+.PHONY: install brain-games publish lint brain-even brain-calc brain-gcd brain-progression brain-prime
