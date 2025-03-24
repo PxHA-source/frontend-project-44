@@ -5,7 +5,6 @@ import { greetUser, checkAnswer, congratulations } from '../cli.js';
 
 /* eslint-disable no-console */
 const divider = (n) => {
-  if (n <= 1) return false;
   for (let i = 2; i < n; i += 1) {
     if (n % i === 0) {
       return false;
@@ -19,7 +18,7 @@ export default function simple() {
   const name = greetUser();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   while (i < 3) {
-    const n = randomNumber();
+    const n = randomNumber(2, 100);
     const correctAnswer = divider(n) ? 'yes' : 'no';
     console.log(`Question: ${n}`);
     const answer = readlineSync.question('Your Answer: ').toLowerCase();
