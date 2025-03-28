@@ -1,7 +1,8 @@
 /* eslint-disable import/extensions */
-import readlineSync from 'readline-sync';
 import randomNumber from '../helper.js';
-import { greetUser, checkAnswer, congratulations } from '../cli.js';
+import { cycle } from '../cli.js';
+
+const descripton = 'What number is missing in the progression?';
 
 const generate = () => {
   // Генерируем случайную длину прогрессии от 5 до 10
@@ -20,24 +21,16 @@ const generate = () => {
   return progression;
 };
 
-/* eslint-disable no-console */
-export default function progression() {
-  let i = 0;
-  const name = greetUser();
-  console.log('What number is missing in the progression?');
-
-  while (i < 3) {
-    const n = generate();
-    const randomIndex = randomNumber(0, n.length - 1);
-    const correctAnswer = n[randomIndex];
-    n[randomIndex] = '..';
-    console.log(`Question: ${n.join(' ')}`);
-    const answer = readlineSync.question('Your Answer: ').toLowerCase();
-    if (checkAnswer(answer, correctAnswer, name)) {
-      i += 1;
-    } else {
-      return;
-    }
-  }
-  congratulations(name);
+function progression() {
+  const n = generate();
+  const randomIndex = randomNumber(0, n.length - 1);
+  const correctAnswer = n[randomIndex];
+  n[randomIndex] = '..';
+  return [n.join(' '), correctAnswer];
 }
+
+const brainProggression = () => {
+  cycle(descripton, progression);
+};
+
+export default brainProggression;
