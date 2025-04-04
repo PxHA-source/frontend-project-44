@@ -23,7 +23,7 @@ export const congratulations = (name) => {
   console.log(`Congratulations, ${name}`);
 };
 
-export const cycle = (descripton, cb) => {
+const cycle = (descripton, cb) => {
   let i = 0;
   const name = greetUser();
   console.log(descripton);
@@ -40,3 +40,5 @@ export const cycle = (descripton, cb) => {
   }
   congratulations(name);
 };
+
+export default cycle;
