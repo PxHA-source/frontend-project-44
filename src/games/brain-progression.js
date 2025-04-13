@@ -1,6 +1,6 @@
 /* eslint-disable import/extensions */
 import randomNumber from '../helper.js';
-import { cycle } from '../cli.js';
+import cycle from '../index.js';
 
 const descripton = 'What number is missing in the progression?';
 

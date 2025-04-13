@@ -1,6 +1,6 @@
 /* eslint-disable import/extensions */
 import randomNumber from '../helper.js';
-import { cycle } from '../cli.js';
+import cycle from '../index.js';
 
 const descripton = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 

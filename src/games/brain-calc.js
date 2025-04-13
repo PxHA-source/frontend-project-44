@@ -1,5 +1,5 @@
 /* eslint-disable import/extensions */
-import { cycle } from '../cli.js';
+import cycle from '../index.js';
 import randomNumber from '../helper.js';
 
 const signs = ['+', '-', '*'];
