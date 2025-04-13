@@ -1,17 +1,17 @@
 /* eslint-disable import/extensions */
-import randomNumber from '../helper.js';
+import getRandomNumber, { isEven } from '../helper.js';
 import cycle from '../index.js';
 
 const descripton = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const parityGame = () => {
-  const n = randomNumber();
-  const correctAnswer = n % 2 === 0 ? 'yes' : 'no';
-  return [n, correctAnswer];
+const getIsEvenAnswer = () => {
+  const number = getRandomNumber();
+  const correctAnswer = isEven(number) ? 'yes' : 'no';
+  return [number, correctAnswer];
 };
 
-const parity = () => {
-  cycle(descripton, parityGame);
+const runEvenGame = () => {
+  cycle(descripton, getIsEvenAnswer);
 };
 
-export default parity;
+export default runEvenGame;

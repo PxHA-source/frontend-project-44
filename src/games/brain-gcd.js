@@ -1,6 +1,6 @@
 /* eslint-disable import/extensions */
 import cycle from '../index.js';
-import randomNumber from '../helper.js';
+import getRandomNumber from '../helper.js';
 
 const question = 'Find the greatest common divisor of given numbers.';
 
@@ -17,16 +17,16 @@ const euclid = (num1, num2) => {
   return a + b;
 };
 
-function generalDivider() {
-  const num1 = randomNumber(1, 50);
-  const num2 = randomNumber(1, 50);
+function getGCDQuestion() {
+  const num1 = getRandomNumber(1, 50);
+  const num2 = getRandomNumber(1, 50);
   const correctAnswer = String(euclid(num1, num2));
   const result = (`${num1} ${num2}`);
   return [result, correctAnswer];
 }
 
-const brainGCD = () => {
-  cycle(question, generalDivider);
+const runGCDGame = () => {
+  cycle(question, getGCDQuestion);
 };
 
-export default brainGCD;
+export default runGCDGame;

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
 // eslint-disable-next-line import/extensions
-import calc from '../src/games/brain-calc.js';
+import runCalcGame from '../src/games/brain-calc.js';
 
-calc();
+runCalcGame();

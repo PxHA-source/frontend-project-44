@@ -2,7 +2,7 @@
 
 /* eslint-disable import/extensions */
 import readlineSync from 'readline-sync';
-import { greetUser } from './cli.js';
+import greetUser from './cli.js';
 
 export const checkAnswer = (answer, correctAnswer, name) => {
   if (answer === correctAnswer.toString()) {
