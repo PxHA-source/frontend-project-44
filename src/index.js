@@ -35,7 +35,7 @@ const cycle = (description, cb) => {
       i += 1;
     } else {
       console.log(
-        `${answer} is wrong answer ;(. Correct answer was ${correctAnswer}. \nLet's try again, ${name}`,
+        `${answer} is wrong answer ;(. Correct answer was ${correctAnswer}. \n Let's try again, ${name}!`,
       );
       return false;
     }
