@@ -41,7 +41,7 @@ const cycle = (description, cb) => {
     }
   }
 
-  console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}!`);
   return true;
 };
 
