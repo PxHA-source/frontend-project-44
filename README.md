@@ -12,8 +12,8 @@
 5. Игра "Простое ли число?" // brain-prime
 
 Все игры запускается с помощья команды brain-(прописываете нужную игру), под этой строкой находится ссылки на запись этих игр
-https://asciinema.org/a/LrdOj6VkpkjBSIl0ZRMfAI6my // "Проверка на чётность"
-https://asciinema.org/a/YmrsAs6BpCBDA9dS3HJ9R3YDj // "Калькулятор"
-https://asciinema.org/a/zNAfgGMWxtxZtx5OZPeavoZNV // "НОД"
-https://asciinema.org/a/XcyWjyc0I8DlkdjOvVJpk9RDb // "Арифметическая прогрессия"
-https://asciinema.org/a/0EpofsrRAz9aBRK5aE5CHbCPo // "Простое ли число?"
+https://asciinema.org/a/LrdOj6VkpkjBSIl0ZRMfAI6my // "Проверка на чётность" \n
+https://asciinema.org/a/YmrsAs6BpCBDA9dS3HJ9R3YDj // "Калькулятор" \n
+https://asciinema.org/a/zNAfgGMWxtxZtx5OZPeavoZNV // "НОД" \n
+https://asciinema.org/a/XcyWjyc0I8DlkdjOvVJpk9RDb // "Арифметическая прогрессия" \n
+https://asciinema.org/a/0EpofsrRAz9aBRK5aE5CHbCPo // "Простое ли число?" 
